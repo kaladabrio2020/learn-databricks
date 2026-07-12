@@ -1,0 +1,1 @@
+* [Limitacoes](https://docs.databricks.com/aws/en/getting-started/free-edition-limitations)

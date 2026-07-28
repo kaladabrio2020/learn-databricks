@@ -1,0 +1,17 @@
+{
+  "current_simulation_time": null,
+  "bootstrap_completed": false,
+  "bootstrap_start_date": "2026-01-28T00:00:00",
+  "bootstrap_until": "2026-07-26T23:59:59",
+  "total_customers": 0,
+  "total_products": 0,
+  "total_orders": 0,
+  "total_payments": 0,
+  "total_deliveries": 0,
+  "last_generation": null,
+  "next_generation": null,
+  "simulation_status": "Running",
+  "generation_interval_seconds": 300,
+  "max_orders_per_cycle": 10,
+  "max_clients_per_cycle": 5
+}

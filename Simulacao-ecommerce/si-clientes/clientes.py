@@ -40,11 +40,6 @@ def _fmt_nome(nome: str) -> str:
     return nome
 
 
-def _fmt_complemento(valor: str | None) -> str | None:
-    """~2% complemento como string vazia ao invés de None."""
-    if valor is None and random.random() < 0.02:
-        return ""
-    return valor
 
 
 # ---------------------------------------------------------------------------
@@ -55,8 +50,6 @@ def gerar_cliente(data_cadastro: datetime) -> dict:
     """Gera um único cliente com dados levemente sujos."""
     digitos = _fake.msisdn()[2:13]  # 11 dígitos sem prefixo de país
 
-    complemento = _fake.secondary_address() if random.random() < 0.55 else None
-    complemento = _fmt_complemento(complemento)
 
     return {
         "nome":          _fmt_nome(_fake.name()),
@@ -65,7 +58,6 @@ def gerar_cliente(data_cadastro: datetime) -> dict:
         "telefone":      _fmt_telefone(digitos),
         "logradouro":    _fake.street_name(),
         "numero":        _fake.building_number(),
-        "complemento":   complemento,
         "bairro":        _fake.bairro(),
         "cidade":        _fake.city(),
         "estado":        _fake.estado_sigla(),
